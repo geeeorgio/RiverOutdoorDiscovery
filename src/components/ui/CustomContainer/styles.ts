@@ -15,5 +15,6 @@ export const styles = StyleSheet.create({
   secondary: {
     backgroundColor: COLORS.tab_bar_background,
     borderWidth: wp(1),
+    borderColor: COLORS.container_border,
   },
 });

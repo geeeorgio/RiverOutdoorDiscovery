@@ -6,7 +6,7 @@ export const COLORS = {
 
   main_background: '#1E1E1E',
   tab_bar_background: '#060709',
-  btn_background: '#624E31',
+  btn_background: '#5A4325',
   container_background: '#513C23',
   active_brown_background: '#614827',
 
@@ -15,6 +15,7 @@ export const COLORS = {
 
   tab_bar_border: '#646464',
   container_border: '#656565',
+  btn_border: '#7C623D',
 
   inactive_icon: '#575757',
 };

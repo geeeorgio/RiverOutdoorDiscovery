@@ -1,6 +1,6 @@
-import type { ANIMAL_INFO_TYPE } from 'src/types';
-
 import { ANIMALS_IMAGES } from './images';
+
+import type { ANIMAL_INFO_TYPE } from 'src/types';
 
 export const ANIMALS_LIST: ANIMAL_INFO_TYPE[] = [
   {

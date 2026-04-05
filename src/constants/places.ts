@@ -1,6 +1,6 @@
-import type { PLACE_INFO_TYPE } from 'src/types';
-
 import { PLACES_IMAGES } from './images';
+
+import type { PLACE_INFO_TYPE } from 'src/types';
 
 export const PLACES_LIST: PLACE_INFO_TYPE[] = [
   {

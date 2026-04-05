@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    paddingBottom: hp(16),
     justifyContent: 'space-between',
     alignItems: 'center',
   },
@@ -14,7 +13,7 @@ export const styles = StyleSheet.create({
     width: wp(30),
     height: hp(30),
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
   },
   title: {
     flex: 1,

@@ -4,22 +4,22 @@ import { COLORS } from 'src/constants';
 import { hp, sp, wp } from 'src/utils';
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    gap: hp(16),
+  item: {
+    padding: wp(8),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  headerContainer: {
+  innerContainer: {
     width: '100%',
-    paddingHorizontal: wp(12),
-  },
-  placeInfoContainer: {
-    width: '100%',
-    paddingHorizontal: wp(16),
-    gap: hp(16),
+    height: hp(100),
+    gap: wp(10),
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: wp(10),
+    overflow: 'hidden',
   },
   imageContainer: {
-    width: '100%',
-    height: hp(160),
+    flex: 0.57,
     borderRadius: wp(10),
     overflow: 'hidden',
   },
@@ -28,40 +28,31 @@ export const styles = StyleSheet.create({
     height: '100%',
   },
   textContainer: {
-    width: '100%',
-    flexDirection: 'row',
+    flex: 0.43,
+    height: '100%',
     justifyContent: 'space-between',
+    alignItems: 'flex-start',
   },
   title: {
-    fontSize: sp(18),
-    flex: 0.6,
-    flexWrap: 'wrap',
+    fontSize: sp(14),
   },
   coordinates: {
-    flex: 0.4,
-    fontSize: sp(13),
-    textAlign: 'right',
+    fontSize: sp(11),
   },
   coordinatesDescription: {
     fontSize: sp(11),
     color: COLORS.onbd_dot_inactive,
   },
+  description: {
+    fontSize: sp(10),
+  },
   button: {
     width: '100%',
-    flexDirection: 'row',
-    gap: wp(16),
-    paddingVertical: hp(8),
+    paddingVertical: hp(4),
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
     fontSize: sp(12),
-  },
-  description: {
-    fontSize: sp(15),
-    textAlign: 'justify',
-  },
-  mapContainer: {
-    width: '100%',
   },
 });

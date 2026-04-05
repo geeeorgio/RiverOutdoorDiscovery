@@ -2,7 +2,6 @@ import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { PlatformPressable } from '@react-navigation/elements';
 import { useLinkBuilder } from '@react-navigation/native';
 import type { ViewStyle } from 'react-native';
-import type { MainStackParamList } from 'src/types';
 
 import CustomContainer from '../CustomContainer/CustomContainer';
 import { TAB_BAR_ICONS_MAP } from '../CustomIcons/iconsMap';
@@ -10,6 +9,7 @@ import { TAB_BAR_ICONS_MAP } from '../CustomIcons/iconsMap';
 import { styles } from './styles';
 
 import { COLORS } from 'src/constants';
+import type { MainStackParamList } from 'src/types';
 import { hp, wp } from 'src/utils';
 
 const CustomTabBar = ({

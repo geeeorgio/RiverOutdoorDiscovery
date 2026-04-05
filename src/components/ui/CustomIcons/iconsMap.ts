@@ -1,5 +1,4 @@
 import type { SvgProps } from 'react-native-svg';
-import type { MainStackParamList } from 'src/types';
 
 import AnimalsIcon from './AnimalsIcon';
 import BackIcon from './BackIcon';
@@ -10,6 +9,8 @@ import QuizIcon from './QuizIcon';
 import SearchIcon from './SearchIcon';
 import ShareIcon from './ShareIcon';
 import StoriesIcon from './StoriesIcon';
+
+import type { MainStackParamList } from 'src/types';
 
 export const ICON_NAMES = [
   'animals',

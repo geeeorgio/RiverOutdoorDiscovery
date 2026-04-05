@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   main: {
     backgroundColor: COLORS.btn_background,
     borderWidth: wp(1),
-    borderColor: COLORS.onbd_dot_active,
+    borderColor: COLORS.btn_border,
   },
   secondary: {
     borderWidth: wp(1),

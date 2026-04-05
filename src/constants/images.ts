@@ -1,5 +1,7 @@
 export const MAIN_BACKGROUND = require('src/assets/images/bckgd/main.png');
 
+export const ICON_IMAGE = require('src/assets/images/bckgd/icon.png');
+
 export const ONBD_IMAGES = {
   onbd_0: require('src/assets/images/onbd/onbd_0.png'),
   onbd_1: require('src/assets/images/onbd/onbd_1.png'),

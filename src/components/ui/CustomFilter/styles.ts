@@ -1,24 +1,21 @@
 import { StyleSheet } from 'react-native';
 
-import { hp, wp } from 'src/utils';
+import { sp, wp } from 'src/utils';
 
 export const styles = StyleSheet.create({
   container: {
-    width: '90%',
-    alignSelf: 'center',
-    position: 'absolute',
+    width: '100%',
     flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
     gap: wp(6),
-    bottom: hp(50),
-    zIndex: 1000,
-    padding: wp(12),
-    borderRadius: wp(20),
   },
-  btn: {
+  typeButton: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: wp(8),
+  },
+  typeText: {
+    fontSize: sp(14),
   },
 });

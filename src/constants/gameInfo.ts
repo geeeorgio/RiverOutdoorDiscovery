@@ -1,6 +1,6 @@
-import type { TRAVELER_DESCRIPTION_OBJECT_TYPE } from 'src/types';
-
 import { MAIN_BACKGROUND, ONBD_IMAGES, QUIZ_TYPES_IMAGES } from './images';
+
+import type { TRAVELER_DESCRIPTION_OBJECT_TYPE } from 'src/types';
 
 export const ONBOARDING_INFO = {
   onboarding_1: {

@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     gap: wp(6),
   },
+  disabled: {
+    opacity: 0.5,
+  },
   typeButton: {
     flex: 1,
     justifyContent: 'center',

@@ -10,17 +10,22 @@ import { PLACES_TYPES_LIST } from 'src/types';
 interface CustomFilterProps {
   filter: FILTER_TYPE;
   setFilter: (filter: FILTER_TYPE) => void;
+  disabled?: boolean;
 }
 
-const CustomFilter = ({ filter, setFilter }: CustomFilterProps) => {
+const CustomFilter = ({ filter, setFilter, disabled }: CustomFilterProps) => {
   return (
-    <CustomContainer colorVariant="secondary" style={styles.container}>
+    <CustomContainer
+      colorVariant="secondary"
+      style={[styles.container, disabled && styles.disabled]}
+    >
       {PLACES_TYPES_LIST.map((type) => (
         <CustomButton
           key={type}
           variant={type === filter ? 'main' : 'default'}
           style={styles.typeButton}
           onPress={() => setFilter(type)}
+          disabled={disabled}
         >
           <CustomText
             variant={type === filter ? 'semiBold' : 'regular'}

@@ -62,6 +62,7 @@ export const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   mapContainer: {
+    flex: 1,
     width: '100%',
   },
 });

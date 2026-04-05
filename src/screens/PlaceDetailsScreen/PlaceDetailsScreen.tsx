@@ -35,6 +35,16 @@ const PlaceDetailsScreen = () => {
     }
   }, [navigation]);
 
+  const handleOpenInMap = useCallback(
+    (id: string) => {
+      navigation.navigate('MainStack', {
+        screen: 'MapScreen',
+        params: { placeId: id },
+      });
+    },
+    [navigation],
+  );
+
   return (
     <SafeAreaView edges={['top', 'left', 'right']} style={styles.container}>
       <View style={styles.headerContainer}>
@@ -67,7 +77,7 @@ const PlaceDetailsScreen = () => {
             <CustomButton
               variant="main"
               style={styles.button}
-              onPress={() => {}}
+              onPress={() => handleOpenInMap(placeId)}
             >
               <CustomText variant="btnText" style={styles.buttonText}>
                 Open in Map
@@ -86,7 +96,7 @@ const PlaceDetailsScreen = () => {
           </View>
 
           <View style={styles.mapContainer}>
-            <MapComponent />
+            <MapComponent place={place} />
           </View>
         </>
       ) : (

@@ -5,7 +5,7 @@ export type MainStackParamList = {
   AnimalsScreen: undefined;
   StoriesScreen: undefined;
   QuizScreen: undefined;
-  MapScreen: undefined;
+  MapScreen: { placeId?: string };
 };
 
 export type MainStackNavigationProp =

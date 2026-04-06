@@ -10,6 +10,7 @@ import CustomTabBar from './ui/CustomTabBar/CustomTabBar';
 import CustomText from './ui/CustomText/CustomText';
 import EmptyMessage from './ui/EmptyMessage/EmptyMessage';
 import MapComponent from './ui/MapComponent/MapComponent';
+import StoryList from './ui/StoryList/StoryList';
 
 export {
   GameBackground,
@@ -24,4 +25,5 @@ export {
   CustomList,
   EmptyMessage,
   MapComponent,
+  StoryList,
 };

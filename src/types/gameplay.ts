@@ -49,3 +49,9 @@ export type ANIMAL_INFO_TYPE = {
   description: string;
   image: ImageSourcePropType;
 };
+
+export type STORY_TYPE = {
+  id: string;
+  title: string;
+  description: string;
+};

@@ -55,3 +55,5 @@ export type STORY_TYPE = {
   title: string;
   description: string;
 };
+
+export type QUIZ_STATUS = 'idle' | 'inProgress' | 'completed';

@@ -1,6 +1,9 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { Image, ScrollView, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Image, ImageBackground, View } from 'react-native';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 import { styles } from './styles';
 
@@ -15,6 +18,7 @@ import {
   QUIZ_SCREEN_INFO,
   QUESTIONS_PER_ONE_QUIZ,
   TRAVEL_TYPES_INFO,
+  ONBD_IMAGES,
 } from 'src/constants';
 import type { QUIZ_STATUS, QUIZ_QUESTION_TYPE, TRAVELER_TYPE } from 'src/types';
 import { wp, hp, handleShare, shuffleArray } from 'src/utils';
@@ -27,6 +31,8 @@ const QuizScreen = () => {
   const [selectedOption, setSelectedOption] = useState<TRAVELER_TYPE | null>(
     null,
   );
+
+  const { bottom } = useSafeAreaInsets();
 
   const resultType = useMemo<TRAVELER_TYPE | null>(() => {
     if (status !== 'completed' || answers.length === 0) return null;
@@ -107,47 +113,42 @@ const QuizScreen = () => {
           onBackPress={handleRestart}
         />
 
-        <ScrollView
-          style={styles.resultScrollView}
-          showsVerticalScrollIndicator={false}
-        >
-          <View style={styles.resultContainer}>
-            <CustomText variant="regular" style={styles.resultDescription}>
+        <View style={styles.resultScrollView}>
+          <View style={styles.traitsList}>
+            <CustomText variant="regular" style={styles.text}>
               {result.description}
             </CustomText>
-            <CustomText variant="semiBold" style={styles.traitsTitle}>
+            <CustomText variant="regular" style={styles.text}>
               Traits:
             </CustomText>
             {result.traits.map((trait, index) => (
-              <CustomText
-                key={index}
-                variant="regular"
-                style={styles.traitItem}
-              >
+              <CustomText key={index} variant="regular" style={styles.text}>
                 {`\u2022 ${trait}`}
               </CustomText>
             ))}
-
-            <View style={styles.resultImageContainer}>
-              <Image
-                source={result.image}
-                style={styles.resultImage}
-                resizeMode="cover"
-              />
-            </View>
-
-            <CustomButton
-              variant="main"
-              style={styles.shareButton}
-              onPress={handleShare}
-            >
-              <CustomText variant="btnText" style={styles.shareButtonText}>
-                Share
-              </CustomText>
-              <CustomIcon name="share" width={wp(16)} height={hp(16)} />
-            </CustomButton>
           </View>
-        </ScrollView>
+
+          <CustomButton
+            variant="main"
+            style={styles.shareButton}
+            onPress={handleShare}
+          >
+            <CustomText variant="btnText" style={styles.shareButtonText}>
+              Share
+            </CustomText>
+            <CustomIcon name="share" width={wp(16)} height={hp(16)} />
+          </CustomButton>
+        </View>
+
+        <View
+          style={[styles.resultImageContainer, { bottom: bottom + hp(40) }]}
+        >
+          <Image
+            source={result.image}
+            style={styles.resultImage}
+            resizeMode="contain"
+          />
+        </View>
       </SafeAreaView>
     );
   }
@@ -168,11 +169,8 @@ const QuizScreen = () => {
               return (
                 <CustomButton
                   key={option.type}
-                  variant="quiz"
-                  style={[
-                    styles.optionButton,
-                    isSelected && styles.optionButtonSelected,
-                  ]}
+                  variant={isSelected ? 'quiz' : 'secondary'}
+                  style={styles.optionButton}
                   onPress={() => handleSelectOption(option.type)}
                 >
                   <CustomText variant="regular" style={styles.optionText}>
@@ -182,52 +180,48 @@ const QuizScreen = () => {
               );
             })}
           </View>
-
-          <CustomButton
-            variant="main"
-            style={styles.navigationButton}
-            onPress={handleNext}
-            disabled={!selectedOption}
-          >
-            <CustomText variant="btnText" style={styles.navigationButtonText}>
-              {isLastQuestion ? 'Finish' : 'Next'}
-            </CustomText>
-          </CustomButton>
         </View>
+
+        <CustomButton
+          variant="main"
+          style={styles.navigationButton}
+          onPress={handleNext}
+          disabled={!selectedOption}
+        >
+          <CustomText variant="btnText" style={styles.navigationButtonText}>
+            {isLastQuestion ? 'Finish' : 'Next'}
+          </CustomText>
+        </CustomButton>
       </SafeAreaView>
     );
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.startContainer}>
-        <CustomText variant="semiBold" style={styles.startTitle}>
-          {QUIZ_SCREEN_INFO.title}
-        </CustomText>
+    <ImageBackground style={styles.bckg} source={ONBD_IMAGES.onbd_1}>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.startContainer}>
+          <View style={styles.startTextContainer}>
+            <CustomText variant="semiBold" style={styles.startTitle}>
+              {QUIZ_SCREEN_INFO.title}
+            </CustomText>
 
-        <View style={styles.startImageContainer}>
-          <Image
-            source={QUIZ_SCREEN_INFO.image}
-            style={styles.startImage}
-            resizeMode="cover"
-          />
+            <CustomText variant="regular" style={styles.startDescription}>
+              {QUIZ_SCREEN_INFO.description}
+            </CustomText>
+          </View>
+
+          <CustomButton
+            variant="main"
+            style={styles.startButton}
+            onPress={handleStartQuiz}
+          >
+            <CustomText variant="btnText" style={styles.startButtonText}>
+              {QUIZ_SCREEN_INFO.buttonText}
+            </CustomText>
+          </CustomButton>
         </View>
-
-        <CustomText variant="regular" style={styles.startDescription}>
-          {QUIZ_SCREEN_INFO.description}
-        </CustomText>
-
-        <CustomButton
-          variant="main"
-          style={styles.startButton}
-          onPress={handleStartQuiz}
-        >
-          <CustomText variant="btnText" style={styles.startButtonText}>
-            {QUIZ_SCREEN_INFO.buttonText}
-          </CustomText>
-        </CustomButton>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </ImageBackground>
   );
 };
 

@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import type { MainStackParamList } from 'src/types';
 
 import { CustomTabBar } from 'src/components';
 import {
@@ -9,6 +8,7 @@ import {
   QuizScreen,
   StoriesScreen,
 } from 'src/screens';
+import type { MainStackParamList } from 'src/types';
 
 const MainStack = createBottomTabNavigator<MainStackParamList>();
 

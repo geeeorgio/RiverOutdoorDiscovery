@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
 
-import { COLORS } from 'src/constants';
 import { hp, sp, wp } from 'src/utils';
 
 export const styles = StyleSheet.create({
+  bckg: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     paddingHorizontal: wp(16),
@@ -11,23 +13,17 @@ export const styles = StyleSheet.create({
   },
   startContainer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    gap: hp(24),
+    paddingBottom: hp(50),
+  },
+  startTextContainer: {
+    width: '100%',
+    gap: hp(60),
   },
   startTitle: {
     fontSize: sp(20),
     textAlign: 'center',
-  },
-  startImageContainer: {
-    width: wp(200),
-    height: wp(200),
-    borderRadius: wp(100),
-    overflow: 'hidden',
-  },
-  startImage: {
-    width: '100%',
-    height: '100%',
   },
   startDescription: {
     fontSize: sp(16),
@@ -42,16 +38,17 @@ export const styles = StyleSheet.create({
     marginTop: hp(16),
   },
   startButtonText: {
-    fontSize: sp(14),
+    fontSize: sp(18),
   },
   questionContainer: {
     flex: 1,
-    gap: hp(24),
+    gap: hp(60),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   questionText: {
     fontSize: sp(16),
     textAlign: 'center',
-    marginTop: hp(16),
   },
   optionsContainer: {
     width: '100%',
@@ -64,12 +61,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  optionButtonSelected: {
-    backgroundColor: COLORS.active_brown_background,
-    borderColor: COLORS.btn_border,
-  },
   optionText: {
-    fontSize: sp(13),
+    fontSize: sp(12),
     textAlign: 'center',
   },
   navigationButton: {
@@ -77,53 +70,48 @@ export const styles = StyleSheet.create({
     paddingVertical: hp(10),
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 'auto',
-    marginBottom: hp(24),
+    marginBottom: hp(50),
   },
   navigationButtonText: {
-    fontSize: sp(14),
+    fontSize: sp(16),
   },
   resultScrollView: {
     flex: 1,
-  },
-  resultContainer: {
-    width: '100%',
     paddingHorizontal: wp(6),
-    gap: hp(16),
     paddingBottom: hp(40),
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  resultDescription: {
+  traitsList: {
+    paddingTop: hp(40),
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
     fontSize: sp(14),
     textAlign: 'center',
-    lineHeight: sp(20),
-  },
-  traitsTitle: {
-    fontSize: sp(14),
-    textAlign: 'center',
-  },
-  traitItem: {
-    fontSize: sp(13),
-    textAlign: 'center',
-  },
-  resultImageContainer: {
-    width: '100%',
-    height: hp(280),
-    borderRadius: wp(10),
-    overflow: 'hidden',
-  },
-  resultImage: {
-    width: '100%',
-    height: '100%',
   },
   shareButton: {
     width: '100%',
     flexDirection: 'row',
-    gap: wp(16),
+    gap: wp(10),
     paddingVertical: hp(8),
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 100,
   },
   shareButtonText: {
-    fontSize: sp(14),
+    fontSize: sp(15),
+  },
+  resultImageContainer: {
+    position: 'absolute',
+    alignSelf: 'center',
+    width: '100%',
+    height: '60%',
+  },
+  resultImage: {
+    width: '100%',
+    height: '100%',
   },
 });

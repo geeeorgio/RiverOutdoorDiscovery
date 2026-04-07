@@ -5,7 +5,7 @@ import { hp } from 'src/utils';
 export const styles = StyleSheet.create({
   list: {
     flex: 1,
-    width: '95%',
+    width: '97%',
     alignSelf: 'center',
   },
   contentContainer: {

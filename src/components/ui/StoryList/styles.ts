@@ -12,6 +12,6 @@ export const styles = StyleSheet.create({
     gap: hp(12),
   },
   footer: {
-    height: hp(60),
+    height: hp(40),
   },
 });

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   },
   innerContainer: {
     width: '100%',
-    height: hp(100),
+    height: hp(110),
     gap: wp(10),
     flexDirection: 'row',
     alignItems: 'center',
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   imageContainer: {
-    flex: 0.57,
+    flex: 0.58,
     borderRadius: wp(10),
     overflow: 'hidden',
   },
@@ -28,19 +28,19 @@ export const styles = StyleSheet.create({
     height: '100%',
   },
   textContainer: {
-    flex: 0.43,
+    flex: 0.42,
     height: '100%',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
   },
   title: {
-    fontSize: sp(14),
+    fontSize: sp(12),
   },
   coordinates: {
-    fontSize: sp(11),
+    fontSize: sp(10),
   },
   coordinatesDescription: {
-    fontSize: sp(11),
+    fontSize: sp(10),
     color: COLORS.onbd_dot_inactive,
   },
   description: {

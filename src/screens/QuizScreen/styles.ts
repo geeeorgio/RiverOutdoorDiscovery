@@ -47,7 +47,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   questionText: {
-    fontSize: sp(16),
+    fontSize: sp(15),
     textAlign: 'center',
   },
   optionsContainer: {

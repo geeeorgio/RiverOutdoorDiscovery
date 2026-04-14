@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
   },
   coordinatesDescription: {
     fontSize: sp(10),
-    color: COLORS.onbd_dot_inactive,
+    color: COLORS.onbd_dot_active,
   },
   description: {
     fontSize: sp(10),

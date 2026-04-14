@@ -79,7 +79,7 @@ android {
 
     namespace "com.riveroutdoordiscovery"
     defaultConfig {
-        applicationId "com.riveroutdoordiscovery"
+        applicationId "com.purepathexplorer"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

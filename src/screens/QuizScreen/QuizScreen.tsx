@@ -19,6 +19,7 @@ import {
   QUESTIONS_PER_ONE_QUIZ,
   TRAVEL_TYPES_INFO,
   ONBD_IMAGES,
+  COLORS,
 } from 'src/constants';
 import type { QUIZ_STATUS, QUIZ_QUESTION_TYPE, TRAVELER_TYPE } from 'src/types';
 import { wp, hp, handleShare, shuffleArray } from 'src/utils';
@@ -136,7 +137,12 @@ const QuizScreen = () => {
             <CustomText variant="btnText" style={styles.shareButtonText}>
               Share
             </CustomText>
-            <CustomIcon name="share" width={wp(16)} height={hp(16)} />
+            <CustomIcon
+              name="share"
+              width={wp(16)}
+              height={hp(16)}
+              color={COLORS.white}
+            />
           </CustomButton>
         </View>
 

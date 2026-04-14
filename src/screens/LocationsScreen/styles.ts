@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 
+import { COLORS } from 'src/constants';
 import { hp, sp, wp } from 'src/utils';
 
 export const styles = StyleSheet.create({
@@ -26,6 +27,7 @@ export const styles = StyleSheet.create({
     paddingBottom: hp(24),
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor: COLORS.overlay_background,
   },
   title: {
     fontSize: sp(18),

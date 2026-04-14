@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     paddingBottom: hp(20),
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: COLORS.overlay_background,
   },
   headerContainer: {
     width: '100%',

@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
   },
   coordinatesDescription: {
     fontSize: sp(11),
-    color: COLORS.onbd_dot_inactive,
+    color: COLORS.onbd_dot_active,
   },
   button: {
     width: '100%',

@@ -12,7 +12,7 @@ import {
   CustomList,
   CustomText,
 } from 'src/components';
-import { ANIMALS_LIST } from 'src/constants';
+import { ANIMALS_LIST, COLORS } from 'src/constants';
 import type { ANIMAL_INFO_TYPE, FILTER_TYPE } from 'src/types';
 import { wp, hp, handleShare } from 'src/utils';
 
@@ -60,7 +60,12 @@ const AnimalsScreen = () => {
               <CustomText variant="btnText" style={styles.animalButtonText}>
                 Share
               </CustomText>
-              <CustomIcon name="share" width={wp(16)} height={hp(16)} />
+              <CustomIcon
+                name="share"
+                width={wp(16)}
+                height={hp(16)}
+                color={COLORS.white}
+              />
             </CustomButton>
           </View>
         </>

@@ -11,7 +11,7 @@ import {
   CustomText,
   StoryList,
 } from 'src/components';
-import { STORIES } from 'src/constants';
+import { COLORS, STORIES } from 'src/constants';
 import type { STORY_TYPE } from 'src/types';
 import { wp, hp, handleShare } from 'src/utils';
 
@@ -47,7 +47,12 @@ const StoriesScreen = () => {
                 <CustomText variant="btnText" style={styles.storyButtonText}>
                   Share
                 </CustomText>
-                <CustomIcon name="share" width={wp(16)} height={hp(16)} />
+                <CustomIcon
+                  name="share"
+                  width={wp(16)}
+                  height={hp(16)}
+                  color={COLORS.white}
+                />
               </CustomButton>
             </View>
           </ScrollView>

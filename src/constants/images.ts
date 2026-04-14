@@ -1,13 +1,13 @@
-export const MAIN_BACKGROUND = require('src/assets/images/bckgd/main.png');
+export const MAIN_BACKGROUND = require('src/assets/images/bckgd/pure_main_logo.png');
 
-export const ICON_IMAGE = require('src/assets/images/bckgd/icon.png');
+export const ICON_IMAGE = require('src/assets/images/bckgd/pure_icon.png');
 
 export const ONBD_IMAGES = {
-  onbd_0: require('src/assets/images/onbd/onbd_0.png'),
-  onbd_1: require('src/assets/images/onbd/onbd_1.png'),
-  onbd_2: require('src/assets/images/onbd/onbd_2.png'),
-  onbd_3: require('src/assets/images/onbd/onbd_3.png'),
-  onbd_4: require('src/assets/images/onbd/onbd_4.png'),
+  onbd_0: require('src/assets/images/onbd/pure_onbd_0.png'),
+  onbd_1: require('src/assets/images/onbd/pure_onbd_4.png'),
+  onbd_2: require('src/assets/images/onbd/pure_onbd_1.png'),
+  onbd_3: require('src/assets/images/onbd/pure_onbd_2.png'),
+  onbd_4: require('src/assets/images/onbd/pure_onbd_3.png'),
 };
 
 export const QUIZ_TYPES_IMAGES = {

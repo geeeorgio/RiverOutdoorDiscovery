@@ -1,23 +1,23 @@
 export const COLORS = {
   white: '#FFFFFF',
   black: '#000000',
-  onbd_text: '#FEF9EF',
-  placeholder_text: '#8E8570',
+  onbd_text: '#FFF5F5',
+  placeholder_text: '#8E7070',
 
-  main_background: '#301F04',
-  tab_bar_background: '#4A2E05',
-  btn_background: '#BF9013',
-  container_background: '#2D2A22',
-  active_brown_background: '#453F30',
+  main_background: '#2B1414',
+  tab_bar_background: '#421C1C',
+  btn_background: '#702121',
+  container_background: '#382222',
+  active_brown_background: '#543030',
 
-  onbd_dot_active: '#FFCC33',
-  onbd_dot_inactive: 'rgba(255, 204, 51, 0.3)',
+  onbd_dot_active: '#E25E5E',
+  onbd_dot_inactive: 'rgba(226, 200, 200, 0.5)',
 
-  tab_bar_border: '#3D392E',
-  container_border: '#4A4435',
-  btn_border: '#E9B824',
+  tab_bar_border: '#522E2E',
+  container_border: '#5C3A3A',
+  btn_border: '#C25454',
 
-  inactive_icon: '#6B6454',
+  inactive_icon: '#7A6565',
 
-  overlay_background: 'rgba(0, 0, 0, 0.33)',
+  overlay_background: 'rgba(0, 0, 0, 0.3)',
 };
